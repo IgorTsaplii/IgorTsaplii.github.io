@@ -11,55 +11,89 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-	<div class="loading_bg">
+	<nav class="navbar navbar-expand-md navbar-dark ">
+	  <a class="navbar-brand" href="#first_block">Igor Tsaplii</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav">
+	    	<li><a href="#portfolio">portfolio</a></li>
+	    	<li><a href="#skills">skills</a></li>
+	    	<li><a href="#contacts">contacts</a></li>
+	    </ul>
+	  </div>
+	</nav>
+
+
+
+	<!-- <div class="loading_bg">
 		<div class="col-8 col-sm-6 col-md-4 col-lg-2">
 			<img src="images/cogwheel1.svg" alt="cogwheel">
 			<h2>Loading...</h2>
 		</div>
-	</div>
-	<!-- <div class="banner">
-		<img src="images/pwcontrol_main.jpg" alt="pwcontrol main"  class="col-12 col-sm-10 col-md-8 ">
 	</div> -->
-	<div class="container-md">
+	<section class="container-fluid" id="first_block">
+		<h1 class="col-12">Igor Tsaplii</h1>
+		<p class="col-12">HTML - CSS - jQuery - Bootstrap - SCSS - Git</p>
+	</section>
+
+	<section class="container-md portfolio" id="portfolio">
 		<div class="row">
-			<h1 class="col-12">Igor Tsaplii's portfolio</h1>
-			<h2 class="col-12">My works</h2>
-			<div class="col-12 col-md-6 col-lg-4">
-				<div class="works_item">					
+			<h2 class="col-12">portfolio</h2>
+			<div class="col-12 col-sm-6">
+				<div class="works_item">
 					<img src="images/control.JPG" alt="Control website">
-					<div class="row">
-						<h3 class="col-10">ConTroL</h3>
-						<div class="col-2 a_block">
-							<a href="my_works/control/index.html" target="_blank"></a>
-						</div>
-					</div>
+					<a href="my_works/control/index.html" target="_blank"></a>	
 				</div>
 			</div>
-			<div class="col-12 col-md-6 col-lg-4">
+			<div class="col-12 col-sm-6">
 				<div class="works_item">
 					<img src="images/sydney.JPG" alt="SYDNEY CBD LIMOS website">
-					<div class="row">
-						<h3 class="col-10">SYDNEY CBD LIMOS</h3>
-						<div class="col-2 a_block">
-							<a href="my_works/sydney/index.html" target="_blank"></a>
-						</div>
-					</div>
+					<a href="my_works/sydney/index.html" target="_blank"></a>	
 				</div>
 			</div>
 		</div>
-		<footer>
+	</section>
+	<section class="container-fluid" id="skills">
+		<div class="container-md">
 			<div class="row">
-				<p class="col-12 col-md-6">E-Mail: igor.tsaplii@gmail.com</p>
-				<p class="col-12 col-md-6">Telegram: @igor_tsaplii</p>
+				<h2 class="col-12">skills</h2>
+				<p class="col-12">Excellent knowledge of HTML and CSS. Adaptive layout. Cross-browser compatibility and validity. I am able to work with GIT projects.</p>
 			</div>
+		</div>						
+	</section>
+	<section class="container-md" id="contacts">
+		<div class="row">
+			<h2 class="col-12">contacts</h2>
+			<p class="col-12 col-md-6">E-Mail: igor.tsaplii@gmail.com</p>
+			<p class="col-12 col-md-6">Telegram: @igor_tsaplii</p>
+		</div>
+	</section>
+		<footer>
+			<p>© 2020 Igor Tsaplii. All rights reserved</p>
 		</footer>
 	</div>
 	<script>
-		$(document).ready(function(){
+		/*$(document).ready(function(){
 			setTimeout(function (){
 			$('.loading_bg').css("display", "none");
 			}, 1000);
+		});*/
+
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 50) {
+				$('.navbar').css("padding-bottom", "8px").css("padding-top", "8px");
+				/*$('.navbar ul>li').css("font-size", "18px");.animate({fontSize: "35px" }, 1000 )*/
+				$('.navbar-brand').css("font-size", "35px");/*.animate({fontSize: '35px' }, 1000)*/
+			}else{
+				$('.navbar').css("padding-bottom", "20px").css("padding-top", "20px");		
+				/*$('.navbar ul>li').css("font-size", "24px");*//*.animate({fontSize: "45px" }, 1000 )*/
+				$('.navbar-brand').css("font-size", "45px");/*.animate({fontSize: '45px' }, 1000)*/
+			}
 		});
+
 	</script>
 </body>
 </html>
