@@ -1,1 +1,0 @@
-# IgorTsaplii.github.io
